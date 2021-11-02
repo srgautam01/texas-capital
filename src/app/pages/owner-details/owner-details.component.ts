@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'page-owner-details',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OwnerDetailsComponent implements OnInit {
 
-  constructor() { }
+  userData = {
+    firstName: "Sundar",
+    lastName: "Gautam",
+  };
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(): void {
+    console.log("Form submitted.")
+    console.log(this.userData);
+
+    this.router.navigate(['page3']);
+  }
 }

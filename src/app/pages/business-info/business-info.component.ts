@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'page-business-info',
@@ -7,12 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessInfoComponent implements OnInit {
 
-  constructor() { }
+  userData = {
+    businessType: "",
+    natureOfBusiness: "commercial",
+    doingBusinessAs: "production",
+    tinType: "",
+    naicsType: "",
+    businessLegalName: "texascapital",
+    dateOfEstablishment: "",
+    taxIdentificationNumber: ""
+  };
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
+    console.log("form submitted");
+    console.log(this.userData);
 
+
+    this.router.navigate(['page2']);
   }
 }

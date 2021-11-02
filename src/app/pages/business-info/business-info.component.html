@@ -1,48 +1,98 @@
-<div class="container" style="border: solid red 2px">
+<div class="container bg-light py-2">
   <h2>Business Information</h2>
-  <form (ngSubmit)="onSubmit()">
+
+  <pre>
+    {{ userData | json }}
+  </pre>
+  <form #businessInfoForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="businessTypesDropdown">Business Type</label>
-      <select id="businessTypesDropdown" class="form-control">
-        <option>Please Select</option>
-        <option>selection two</option>
+      <select
+        id="businessTypesDropdown"
+        class="form-control"
+        name="businessType"
+        [(ngModel)]="userData.businessType"
+      >
+        <option value="">Please Select</option>
+        <option value="smallBussiness">Small Bussiness</option>
+        <option value="commercialBusiness">Commercial Business</option>
       </select>
     </div>
     <div class="form-group">
       <label for="natureBussiness">Nature Of Business </label>
-      <input type="text" class="form-control" id="natureBussiness" />
+      <input
+        type="text"
+        class="form-control"
+        id="natureBussiness"
+        name="natureOfBusiness"
+        [(ngModel)]="userData.natureOfBusiness"
+      />
     </div>
     <div class="form-group">
       <label for="doingBusiness">Doing Business As </label>
-      <input type="text" class="form-control" id="doingBusiness" />
+      <input
+        type="text"
+        class="form-control"
+        id="doingBusiness"
+        name="doingBusinessAs"
+        [(ngModel)]="userData.doingBusinessAs"
+      />
     </div>
     <div class="form-group">
       <label for="tinTypesDropdown">TIN Type</label>
-      <select id="tinTypesDropdown" class="form-control">
-        <option>Please Select</option>
-        <option>This is TypeTwo</option>
-        <option>This is TypeThree</option>
+      <select
+        id="tinTypesDropdown"
+        class="form-control"
+        [(ngModel)]="userData.tinType"
+        name="tinType"
+      >
+        <option value="">Please Select</option>
+        <option value="personal">Personal TIN</option>
+        <option value="commercial">Commericial TIN</option>
       </select>
     </div>
     <div class="form-group">
       <label for="naicsType">NAICS Type</label>
-      <select id="naicsType" class="form-control">
-        <option>Please Select</option>
-        <option>This is TypeTwo</option>
-        <option>This is TypeThree</option>
+      <select
+        id="naicsType"
+        class="form-control"
+        name="naicsType"
+        [(ngModel)]="userData.naicsType"
+      >
+        <option value="">Please Select</option>
+        <option value="manufacture">Manufacture NAICS</option>
+        <option value="trasportation">Transportaion NAICS</option>
       </select>
     </div>
     <div class="form-group">
       <label for="businessLegalName">Business Legal Name</label>
-      <input type="text" class="form-control" id="businessLegalName" />
+      <input
+        type="text"
+        class="form-control"
+        id="businessLegalName"
+        name="businessLegalName"
+        [(ngModel)]="userData.businessLegalName"
+      />
     </div>
     <div class="form-group">
       <label for="dateOfEstablishment">Date Of Establishment</label>
-      <input type="text" class="form-control" id="dateOfEstablishment" />
+      <input
+        type="text"
+        class="form-control"
+        id="dateOfEstablishment"
+        name="dateOfEstablishment"
+        [(ngModel)]="userData.dateOfEstablishment"
+      />
     </div>
     <div class="form-group">
       <label for="taxIdentification">Tax Identification Number</label>
-      <input type="text" class="form-control" id="taxIdentification" />
+      <input
+        type="text"
+        class="form-control"
+        id="taxIdentification"
+        name="taxIdentification"
+        [(ngModel)]="userData.taxIdentificationNumber"
+      />
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     <!-- <a class="btn btn-primary" href="page2" role="button">Save&Continue</a> -->

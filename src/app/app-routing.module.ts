@@ -10,6 +10,7 @@ import { SummaryDetailsComponent } from './pages/summary-details/summary-details
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'page1', pathMatch: "full" },
   { path: 'page1', component: BusinessInfoComponent },
   { path: 'page2', component: OwnerDetailsComponent },
   { path: 'page3', component: DisclosureVerificationComponent },

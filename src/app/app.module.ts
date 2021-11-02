@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
 import { BusinessInfoComponent } from './pages/business-info/business-info.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OwnerDetailsComponent } from './pages/owner-details/owner-details.component';
 import { DisclosureVerificationComponent } from './pages/disclosure-verification/disclosure-verification.component';
 import { SummaryDetailsComponent } from './pages/summary-details/summary-details.component';
@@ -24,7 +25,9 @@ import { AccountInProgressComponent } from './layout/account-in-progress/account
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
