@@ -11,6 +11,12 @@ export class OwnerDetailsComponent implements OnInit {
   userData = {
     firstName: "Sundar",
     lastName: "Gautam",
+    emailAddress: "sundardemo@gmail.com",
+    inputAddress: "123Address101",
+    inputAddress2: "456Address102",
+    inputCity: "Dallas",
+    inputState: "",
+    inputZip: "",
   };
 
   constructor(private router: Router) { }
