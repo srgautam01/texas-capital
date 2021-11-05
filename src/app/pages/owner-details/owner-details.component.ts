@@ -10,9 +10,9 @@ import { BusinessAcctOpenService } from '../../services/business-acct-open.servi
 export class OwnerDetailsComponent implements OnInit {
   // TODO: remove any
   userData: any = {
-    firstName: "Sundar",
-    lastName: "Gautam",
-    emailAddress: "sundardemo@gmail.com",
+    firstName: "Max",
+    lastName: "Smith",
+    emailAddress: "maxdemo@gmail.com",
     address: {
       line1: null,
       line2: null,

@@ -14,6 +14,9 @@ import { AccountInProgressComponent } from './layout/account-in-progress/account
 
 import { BusinessAcctOpenService } from './services/business-acct-open.service';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,7 @@ import { BusinessAcctOpenService } from './services/business-acct-open.service';
     AccountInProgressComponent
   ],
   imports: [
+    CarouselModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

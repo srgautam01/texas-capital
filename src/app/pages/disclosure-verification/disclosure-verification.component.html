@@ -12,5 +12,15 @@
     {{ userDocuments | json }}
   </pre>
 
+  <carousel>
+    <slide *ngFor="let document of userDocuments">
+      <img
+        [src]="sanitizer.bypassSecurityTrustUrl(document.image)"
+        [alt]="document.type"
+        style="display: block; width: 100%"
+      />
+    </slide>
+  </carousel>
+
   <a class="btn btn-primary" href="page4" role="button">Save&Continue</a>
 </div>
