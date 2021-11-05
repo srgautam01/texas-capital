@@ -1,5 +1,7 @@
 # TexasCapital
 
+![screen-gif](./dist/wesave1-2021-11-05_10.11.12.gif)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
 ## Development server
@@ -25,12 +27,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
-## steps
-1. create angular app ng new
-2. bootstrap installed
-3. generate page components
-4. generate `account-open-progress`
-5. route pages
-6. on click changes URL
