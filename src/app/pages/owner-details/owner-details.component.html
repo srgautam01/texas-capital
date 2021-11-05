@@ -37,8 +37,8 @@
         name="emailAddress"
       />
     </div>
-    <div><label for="givenFile">Documents</label></div>
-    <table class="table table-bordered">
+    <div class="container">Documents</div>
+    <table class="container table table-bordered">
       <thead>
         <tr>
           <th scope="col">No.</th>
@@ -49,14 +49,26 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>License</td>
+          <td><label for="givenLicense">License</label></td>
           <td>
             <input
               type="file"
+              accept="image/*"
               class="form-control"
               id="givenLicense"
+              (change)="onFileChange($event, 'license')"
               name="givenLicense"
             />
+
+            <div class="row" *ngIf="userData.documents.license">
+              Image preview:
+
+              <img
+                src="{{ userData.documents.license }}"
+                height="200"
+                width="200"
+              />
+            </div>
           </td>
         </tr>
         <tr>
@@ -65,10 +77,21 @@
           <td>
             <input
               type="file"
+              accept="image/*"
               class="form-control"
-              id="givenIdCard"
-              name="givenIdCard"
+              id="idCard"
+              (change)="onFileChange($event, 'idCard')"
+              name="idCard"
             />
+
+            <div class="row" *ngIf="userData.documents.idCard">
+              Image preview:
+              <img
+                src="{{ userData.documents.idCard }}"
+                height="200"
+                width="200"
+              />
+            </div>
           </td>
         </tr>
       </tbody>
