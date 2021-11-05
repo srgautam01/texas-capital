@@ -12,6 +12,8 @@ import { SummaryDetailsComponent } from './pages/summary-details/summary-details
 import { FundingDetailsComponent } from './pages/funding-details/funding-details.component';
 import { AccountInProgressComponent } from './layout/account-in-progress/account-in-progress.component';
 
+import { BusinessAcctOpenService } from './services/business-acct-open.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,7 @@ import { AccountInProgressComponent } from './layout/account-in-progress/account
     FormsModule,
 
   ],
-  providers: [],
+  providers: [BusinessAcctOpenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

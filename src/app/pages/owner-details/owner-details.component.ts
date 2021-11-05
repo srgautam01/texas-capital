@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { BusinessAcctOpenService } from '../../services/business-acct-open.service';
 
 @Component({
   selector: 'page-owner-details',
@@ -31,7 +31,7 @@ export class OwnerDetailsComponent implements OnInit {
     }
   };
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private acctService: BusinessAcctOpenService) { }
 
   ngOnInit(): void {
   }
@@ -61,6 +61,8 @@ export class OwnerDetailsComponent implements OnInit {
   onSubmit(): void {
     console.log("Form submitted.")
     console.log(this.userData);
+
+    this.acctService.setClientInfo(this.userData, "owner")
 
     this.router.navigate(['page3']);
   }

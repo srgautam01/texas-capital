@@ -1,3 +1,4 @@
+import { BusinessAcctOpenService } from './../../services/business-acct-open.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -19,15 +20,17 @@ export class BusinessInfoComponent implements OnInit {
     taxIdentificationNumber: ""
   };
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private acctService: BusinessAcctOpenService) { }
 
   ngOnInit(): void {
+    console.log("initializing business info component")
   }
 
   onSubmit() {
     console.log("form submitted");
     console.log(this.userData);
 
+    this.acctService.setClientInfo(this.userData, "business");
 
     this.router.navigate(['page2']);
   }
