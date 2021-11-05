@@ -1,6 +1,6 @@
 # TexasCapital
 
-![screen-gif](./dist/wesave1-2021-11-05_10.11.12.gif)
+![Screenshot](./src/screenshot/wesave1-2021-11-05_10.11.12.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 
